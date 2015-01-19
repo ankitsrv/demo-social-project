@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message</title>
+</head>
+<body>
+
+    <h1>Message &nbsp;&raquo; </h1><a href="{% url 'profile'  %}"><input type="submit" value="Profile Page"/></a>
+    {{ username }}
+    <p></p>
+    <bl>
+    {#<a href="{% url 'create_new_message' {{ username }} %}">Compose</a> #}
+        <a href="/home/message/compose/{{ username }}">Compose</a>
+        &nbsp;&nbsp;
+    <a href="{% url 'inbox' username %}">Inbox</a>
+        &nbsp;&nbsp;
+    <a href="/home/message/sent_messages/{{ username }}">Sent Box</a>
+        &nbsp;&nbsp;
+    </bl>
+
+
+</body>
+</html>

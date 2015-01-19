@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <li>User-ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ post.user }}</li>
+                    <p></p>
+                    <li><strong> time:</strong>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.created }} </li>
+                    <p></p>
+                    <li><strong>Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ post.title }}  </strong></li>
+                       <p></p>
+                    <li><strong>Post:</strong>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.body }}  </li>
+                    {% if post.picture %}
+                             <img src="{% static post.picture.path %}" alt="" width="100" height="100" />
+                        {% endif %}
+
+                    {{ comment }}
+                <form id="post_form" method="post" action="{% url 'comments' post.id %}">
+                    {% csrf_token %}
+                    <p>Add Comment :
+                <input type="text" name="comment" value="" size="50" />
+                <input type="submit" value="Add Comment" /></p>
+                </form>
+                    <p></p>
+
+</body>
+</html>

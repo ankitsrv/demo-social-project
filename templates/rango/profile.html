@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <title>Rango</title>
+</head>
+<body>
+
+
+ {% if user.is_authenticated %}
+    <h1> Profile&nbsp;page &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a href="/rango/logout/">Logout</a> </h1>
+    <p>Login-User : {{ user }}</p>
+     <strong><a href="{% url 'demo_check' %}">New Profile Page</a></strong>
+     <p></p>
+     <a href="{% url 'my_friends' %}">Friends</a>
+    &nbsp;&nbsp;
+
+    <a href="{% url 'message' username %}">Message</a>
+    &nbsp;&nbsp;
+    <a href="{% url 'add_friend' %}">Add friends</a>
+    &nbsp;&nbsp;
+    &nbsp;&nbsp;
+    <a href="{% url 'add_post' %}">News-Feed</a>
+
+    <br> </br>
+    <li><strong>NAME :</strong> {{ title }}</li>
+
+    <li><strong> Username :</strong> {{ username }}</li>
+    <li> Email-id : {{ email }}</li>
+
+    <li> Website : {{ website }}</li>
+
+    <h1> Profile pic of {{ username }} - </h1>
+
+    <img src="{% static picture.path %}" alt="Profile Picture of " width="100" height="100" />
+
+    <form id="like_form" method="post" action="">
+        {% csrf_token %}
+        <p></p>
+        <input type="submit" value="like" /><p></p>
+        Likes: <strong>{{ no_of_likes }}</strong> &nbsp; Liked by: <strong>{{ sender }}</strong>
+        <br /><p></p>
+
+        {# sender: <input type="text" name="sender" value="" size="50" /> #}
+        <br />
+
+        {# <input type="submit" value="submit" /> #}
+    </form>
+
+ {% else %}
+     <h2> first logged in </h2>
+{% endif %}
+
+
+
+</body>
+</html>

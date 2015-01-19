@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}"/>
+        <script src="{% static "js/jquery.js" %}"></script>
+    </head>
+
+    <body>
+
+        <h2>{{ message }}</h2>
+        {% if user.is_authenticated %}
+        <h1>Home Page {{ user.username }}!</h1>
+
+        <h1>Social Network</h1>
+            <a href="{% url 'profile' %}">Profile Page</a>
+            <h3><a href="{% url 'logout' %}">Logout</a> </h3>
+
+        {% else %}
+        <h1>Including Static Media</h1>
+        <h1></h1>
+        hello world !
+        <p></p>
+        <a href="/rango/category_list/">Categorys</a>&nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/rango/add_category/">Add a New Category</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/rango/register/">Register Here</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/rango/login/">Login here</a>&nbsp; &nbsp;&nbsp;
+        <a href="/rango/about/">About</a>&nbsp; &nbsp; &nbsp; &nbsp;
+        {#<img src="{% static "rango.jpg" %}" alt="Picture of rango" />#}
+        {% endif %}
+    </body>
+</html>

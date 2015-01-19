@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}"/>
+        <script src="{% static "js/jquery.js" %}"></script>
+    </head>
+    <body>
+        <h1> Friends List</h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <a href="/home/friends/add_friend/">Add a New friend</a>
+
+        {% if categorys %}
+
+                {% for category in categorys %}
+                    <ol>
+                    <a href="/rango/category/{{ category.name }}/">{{ category.name }}</a>
+                    {#<li>{{ category.views }}</li>#}
+                    {#  <li>{{ category.url }}</li>#}
+                </ol>
+                {% endfor %}
+
+        {% else %}
+            <strong>There are no friends present.</strong>
+        {% endif %}
+
+
+
+
+
+    </body>
+</html>

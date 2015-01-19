@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="{% static "css/flat-ui.css" %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+      <link rel="shortcut icon" href="{% static "favicon.ico" %}">
+      <link rel="stylesheet" href="{% static "css/tem.css"%}">
+      <link rel="stylesheet" href="{% static "css/timeline.css" %}">
+      <link  href="{% static "css/profile.css" %}" rel="stylesheet">
+      <!--<link rel="stylesheet" href="css/message.css">-->
+      <link rel="stylesheet" href="{% static "css/message1.css" %}">
+     <link rel="stylesheet" href="{% static "css/compose.css" %}">
+
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]-->
+     <!-- <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>-->
+    <!--[endif]-->
+  </head>
+  <body>
+
+   <div class="container">
+    	<div class="row" >
+        	<div class="col-lg">
+          		<nav class="navbar navbar-inverse nav1"  role="navigation">
+            		<div class="navbar-header">
+             			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+               			 <span class="sr-only" style="color:red;">Toggle navigation</span>
+             			 </button>
+            		</div>
+
+            	<div class="collapse navbar-collapse" id="navbar-collapse-01">
+            		<ul class="nav navbar-nav navbar-left" >
+
+                		<li id="user"><a href="#fakelink"><span class="fui-user"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profile</a></li>
+                	</ul>
+              		<ul class="nav navbar-nav navbar-right nav-pills" id="user2">
+
+                		<li><a href="#fakelink"><span class="fui-mail"></span><span class="navbar-unread">1</span></a></li>
+                		<li><a href="#fakelink"><span class="glyphicon glyphicon-bell"></span><span class="navbar-unread">1</span></span></a></li>
+               			<li class="dropdown">
+                  		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fui-gear"></span><b class="caret"></b></a>
+                 		 <span class="dropdown-arrow"></span>
+                  			<ul class="dropdown-menu">
+                    			<li><a href="#">Display Density</a></li>
+                     			<li class="divider"></li>
+                     			<li><a href="#">Configure Box</a></li>
+                    	 		<li class="divider"></li>
+                    			<li><a href="#">Send Feedback</a></li>
+
+                    			<li><a href="#">Help</a></li>
+                 			 </ul>
+                		</li>
+
+                 		<li class="dropdown">
+                  		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome {{ username }}<b class="caret"></b></a>
+                  		<span class="dropdown-arrow"> <img src="{% static "images/msg.png" %}" ></span>
+                  			<ul class="dropdown-menu">
+                   				 <li><a href="#"><span class="fui-gear"></span>&nbsp;&nbsp;&nbsp;&nbsp;Settings</a></li>
+                    			 <li><a href="#"><span class="fui-user"></span>&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
+                   				 <li class="divider"></li>
+                    			<li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'logout' %}">Logout</a></a></li>
+                  			</ul>
+                		</li>
+
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
+        </div><!--Menu 1 Row Ends-->
+
+    </div><!--Menu 1 Container Ends"-->
+
+
+
+
+     <!-- <div class="row">
+          <div class="col-lg">
+     <div class="icon-container-bg">
+                    <div class="icon-container-filter"></div>
+                    <div class="icon-container bottom-slider">
+                        <div class="icon">
+                            <div class="diamond">
+                                <img src="../Images/knife.png" alt="">
+                            </div>
+
+
+                       </div>
+                        <div class="icon">
+                            <div class="diamond">
+                                <img src="../Images/knife.png" alt="">
+                            </div>
+
+
+                    </div>
+                        <div class="icon">
+                            <div class="diamond">
+                                <img src="../Images/calc.png" alt="">
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </div>-->
+     <!-- <div class="row">
+      	<div class="col-lg">
+        	<div class="menu_icon">
+            	<div class="menu_icon_item">
+            		<img src="images/msg111.png" class="images/msg111.png" class="img-responsive"></div>
+                    <div class="menu_icon_item"><img src="images/pro_icon.png" class="img-responsive"></div>
+                   <div class="menu_icon_item"><img src="images/newsfed.png" class="img-responsive" height="100px">
+                 </div>
+            </div>
+        </div>
+      </div>-->
+      <div class="row">
+      	<div class="col-lg">
+        	<div
+        	<div class="menu_icon_bar">
+            	<div class="menu_icon_bar_wrap">
+                	<div class="menu_icon_bar_item"><a href="{% url 'message' request.user.username %}"><img src="{% static "images/msg111.png" %}" class="img-rounded" id="msg_icon"></a></div>
+              		<div class="menu_icon_bar_item"><a href="{% url 'my_friends'  %}"><img src="{% static "images/pro_icon.png" %}" class="img-rounded" id="pro_icon"></a></div>
+              		 <div class="menu_icon_bar_item"><a href="{% url 'news'  %}"><img src="{% static "images/newsfed.png" %}" class="img-rounded" id="news_icon"></a></div>
+                 </div>
+             </div>
+             </div>
+             </div>
+
+
+
+
+
+            <div class="row">
+                <div class="col-lg">
+                     <ul class="timeline">
+             <li>
+              <div class="tl-circ"></div>
+              <div class="timeline-panel">
+                <div class="tl-heading">
+                  <h4>Demo status</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>3 hours ago</small></p>
+                </div>
+                <div class="tl-body">
+                  <p>Photo</p>
+                </div>
+                  <div style="color:white"class= "pull-right likecmt">
+                <button class="btn btn-primary btn-xs like"><span>Like</span>&nbsp;(<span class="count" value="0">1</span>)</button>
+                <button class="btn btn-primary btn-xs "><span>Comment</span></button>
+            </div>
+              </div>
+    </li>
+
+
+            <li class="timeline-inverted">
+              <div class="tl-circ"></div>
+              <div class="timeline-panel">
+                <div class="tl-heading">
+                  <h4>Breaking into Spring!</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4/07/2014</small></p>
+                </div>
+                <div class="tl-body">
+                  <p>Hope the weather gets a bit nicer...</p>
+
+                  <p>Y'know, with more sunlight.</p>
+                </div>
+                  <div style="color:white"class= "pull-right likecmt">
+                <button class="btn btn-primary btn-xs like"><span>Like</span>&nbsp;(<span class="count" value="0">1</span>)</button>
+                <button class="btn btn-primary btn-xs "><span>Comment</span></button>
+            </div>
+              </div>
+            </li>
+
+
+
+
+    <li>
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Android L release Date</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3/22/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p>By the Google.</p>
+        </div>
+          <div style="color:white"class= "pull-right likecmt">
+        <button class="btn btn-primary btn-xs like"><span>Like</span>&nbsp;(<span class="count" value="0">1</span>)</button>
+        <button class="btn btn-primary btn-xs "><span>Comment</span></button>
+    </div>
+      </div>
+
+    </li>
+     <li><div class="tl-circ"</li>
+    <li class="timeline-inverted">
+
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Here</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3/16/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p>Here, you find the huge collection of photos <a href="http://lorempixel.com/">fghsdfhdfhg</a>.</p>
+
+          <p><img src="http://lorempixel.com/600/300/nightlife/" alt="lorem pixel"></p>
+        </div>
+          <div style="color:white"class= "pull-right likecmt">
+        <button class="btn btn-primary btn-xs like" value="0"><span>Like</span>&nbsp;(<span >< <input type="text" class="count" value="0" name="mytext"/>1</span>)</button>
+        <button class="btn btn-primary btn-xs "><span>Comment</span></button>
+    </div>
+      </div>
+    </li>
+    <li>
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Important Date!</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3/03/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p>quick summary of the event.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel noarrow">
+        <div class="tl-heading">
+          <h4>Secondary Timeline Box</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3/01/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p> Maybe we include some extra links, tweets, user comments, photos, etc.</p>
+        </div>
+          <div style="color:white"class= "pull-right likecmt">
+        <button class="btn btn-primary btn-xs like" value="0"><span>Like</span>&nbsp;(<span class="count" value="0">1</span>)</button>
+        <button class="btn btn-primary btn-xs "><span>Comment</span></button>
+    </div>
+      </div>
+    </li>
+
+
+
+    <li class="timeline-inverted">
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>The Winter Months</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02/23/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p>Gee time really flies when you're having fun.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4>Yeah we're pretty much done here</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02/11/2014</small></p>
+        </div>
+        <div class="tl-body">
+          <p>Wasn't this fun though?</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+
+        </div>
+
+    </div>
+
+
+        <!-- Main Profile-->
+        <div class="row"><!--Main Profile Row Starts-->
+            <div class="col-lg"><!--Main Profile  First Column Starts-->
+             	<div class="profile ">
+                	<div class="row profile_timeline">
+                    	<div class="col-lg-4">
+
+                        <div class="profile_left_details">
+
+                			<div class="profile_photo text-center">
+                    			<img src="{% static "images/nav_bg.jpg" %}" class="img-circle" width="100px" height="100">
+                            </div>
+                        	<div class="profile_details">
+                       	 		<div class="name text-center"><h3>Aldoshik</h3></div>
+                       	 		<div class="address_profile"><pre>1207, D-Mall, Netaji Subhash Palace Ring Road,Pitampura, Delhi-110034.</pre></div>
+                        		<div class="text-center text-muted" style="color:#ddd;">12000 Views</div>
+                        	</div>
+                     	</div>
+                        </div>
+
+                     <div class="col-lg-8">
+                     <div>
+                     	<div class="cover">
+                        	<img src="{% static "photodune-2755655-party-time-s.jpg" %}" class="img-responsive" height="300px" width="100%">
+                        </div>
+                      </div>
+                     </div>
+                     </div>
+
+                 </div>
+              </div>
+         </div>
+         		<div class="row">
+                <div class="profile">
+                <div class="col-lg-6">
+						<div class="profile_work">
+                        		<div class="profile_work_title">Details</div>
+                                <div class="profile_work_field">
+                                	<ul class="profile_list">
+                                    <li class="profile_list_item1">
+                                    	<div class="field_name1">UserName</div>
+
+                                    </li>
+                                    <li class="profile_list_item1">
+                                    	<div class="field_name1">First Name</div>
+                                    </li>
+                                    <li class="profile_list_item1">
+                                    	<div class="field_name1">Last Name</div>
+
+                                    </li>
+                                    <li class="profile_list_item1">
+                                    	<div class="field_name1">Email ID</div>
+
+                                    </li>
+
+                                    <li class="profile_list_item1">
+                                    	<a href="#"><u>Edit</u></a>
+                                        </li>
+
+                                </div>
+                         </div>
+                    </div>
+                	<div class="col-lg-6">
+						<div class="profile_work">
+                        		<div class="profile_work_title">Work</div>
+                                <div class="profile_work_field">
+                                	<ul class="profile_list">
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Occupation</div>
+                                    	<div class="field_des">What do you do?</div>
+                                    </li>
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">skills</div>
+                                    	<div class="field_des">What do you do?</div>
+                                    </li>
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Employment</div>
+                                    	<div class="field_des">What do you do?</div>
+                                    </li>
+                                    <li class="profile_list_item">
+                                    	<a href="#"><u>Edit</u></a>
+                                        </li>
+
+                                </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-6">
+						<div class="profile_work">
+                        		<div class="profile_work_title">Education</div>
+                                <div class="profile_work_field">
+                                	<ul class="profile_list">
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Engg college</div>
+                                    	<div class="field_des">college name</div>
+                                    </li>
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Schooling</div>
+                                    	<div class="field_des">12th standard</div>
+                                    </li>
+                                     <li class="profile_list_item">
+                                    	<div class="field_name">Schooling</div>
+                                    	<div class="field_des">10th Standard</div>
+                                    </li>
+
+                                    <li class="profile_list_item">
+                                    	<a href="#"><u>Edit</u></a>
+                                        </li>
+
+                                </div>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-6">
+						<div class="profile_work">
+                        		<div class="profile_work_title">Contact Information</div>
+                                <div class="profile_work_field">
+                                	<ul class="profile_list">
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Home</div>
+
+                                    </li>
+                                    <li class="profile_list_item">
+                                    	<div class="field_name">Work</div>
+                                    	<div class="field_des">How can the people reach you at work?</div>
+                                    </li>
+
+                                    <li class="profile_list_item">
+                                    	<a href="#"><u>Edit</u></a>
+                                        </li>
+
+                                </div>
+                         </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+            </div><!--Main Profile Row Ends-->
+
+         </div><!--Main Profile  First Column Ends-->
+
+         <!--profile-->
+
+        <!--User Mail Box-->
+        <div class="container">
+         <div class="row">
+        	<div class="col-lg">
+
+            	<div class="mail_content">
+
+            		<div class="mail_header">
+                    	<!--<div class="row">
+                    	<div class="col-lg mail_topic">
+                        	<ul class="nav-tabs-justified" style="list-style:none;">
+                            <li style="float:left;"><a href="#" class="btn btn-primary glyphicon glyphicon-inbox "id="inbox_id">&nbsp;Inbox</a></li>
+                            <li ><a href="#" class="btn btn-primary glyphicon glyphicon-move" id="outbox_id">&nbsp;Outbox</a></li>
+
+                            </ul>
+
+                        </div>
+                        </div>-->
+
+
+
+            			<ul class="mail_list_header" style="float:left;">
+                         	<li style="float:left; margin-right:.1em"><a href="#" class="btn btn-primary glyphicon glyphicon-inbox "id="inbox_id">&nbsp;Inbox</a></li>
+                            <li style="float:left; margin-right:2em"><a href="#" class="btn btn-primary glyphicon glyphicon-move" id="outbox_id">&nbsp;Outbox</a></li>
+
+                            <li class="compose_button"><a href="#login-box" class="btn btn-primary glyphicon login-window" class="login-window">Compose</a></li>
+                            <li class=""><a href="#" class="btn btn-primary glyphicon glyphicon-refresh">&nbsp;Refresh</a></li>
+                            <li class=""><a href="#" class="btn btn-primary glyphicon read_mail">Mark as Read</a></li>
+                            <li class=""><a href="#" class="btn btn-primary glyphicon unread_mail">Mark as Unread</a></li>
+                            <li class=""><a href="#" class="btn btn-primary glyphicon glyphicon-trash delete_mail">&nbsp;Delete</a></li>
+
+
+                         </ul>
+
+
+
+ 						<!--<table class="table table-responsive mail_table">
+                        	<thead>
+                            	<tr class="table_row">
+                                	<th class="table_row_item1"><input type="checkbox" class="" ></th>
+                                	<th class="">star</th>
+                                   	<th class="">Sender</th>
+                                	<th class="">Subject</th>
+                               		<th class="">Date</th>
+                            	</tr>
+                            </thead>
+                        </table>-->
+                       	<div class="in">
+                        <table id="background-image">
+                        	<thead>
+                            	<tr class="" style="text-align:left; border-bottom:3px solid #eb5656;">
+                                	<th class="" scope="col" width="5"><input type="checkbox" class="checkboxval" ></th>
+                                	<th class="" scope="col" width="5">star</th>
+                                   	<th class="" scope="col" width="20%" class="sender">Sender</th>
+                                	<th class="" scope="col"  width="70%">Subject</th>
+                               		<th class="" scope="col" width="10%">Date</th>
+                            	</tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>aldoshik</td>
+                                    <td class="subject_mail"><a href="" class="title" onclick="open_mail();">Facebook Style YouTube Video Expanding with jQuery</a></td>
+
+                                    <td class="date">May 1</td>
+                                </tr>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Facebook</td>
+                                    <td><a href="" class="title">Facebook Wall Script 3.0</a></td>
+
+                                    <td class="date">Apr 30</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Twitter</td>
+                                    <td><a href="" class="title">Animated Login Form with jQuery & CSS3</a></td>
+
+                                    <td class="date">Apr 28</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>PHP</td>
+                                    <td><a href="" class="title">Validate IPv4 Address in PHP</a></td>
+                                    <td class="date">Apr 20</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar starred"></a></td>
+                                    <td>aldoshik</td>
+                                    <td><a href="" class="title">Identifying Browser Window Screen Size & Name with JQuery</a></td>
+                                    <td class="date">June 19</td>
+                                </tr>
+                                      <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Aldoshik</td>
+                                    <td><a href="" class="title">Facebook Style YouTube Video Expanding with jQuery</a></td>
+                                   	<td class="date">May 1</td>
+                                </tr>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Facebook</td>
+                                    <td><a href="" class="title">Facebook Wall Script 3.0</a></td>
+                                    <td class="date">Apr 30</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Twitter</td>
+                                    <td><a href="" class="title">Animated Login Form with jQuery & CSS3</a></td>
+                                  	<td class="date">Apr 28</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>PHP</td>
+                                    <td><a href="" class="title">Validate IPv4 Address in PHP</a></td>
+                                    <td class="date">Apr 20</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar starred"></a></td>
+                                    <td>aldoshik</td>
+                                    <td><a href="" class="title">Identifying Browser Window Screen Size & Name with JQuery</a></td>
+                                    <td class="date">June 19</td>
+                                </tr>
+                                </tbody>
+
+
+
+
+                            </table>
+                            </div>
+
+                            <!--Outbox --->
+
+                            <div class="out">
+                             <table id="background-image" >
+                             <thead>
+                            	<tr class="" style="text-align:left; border-bottom:3px solid #eb5656;" >
+                                	<th class="" scope="col" width="5"><input type="checkbox" class="checkboxval" ></th>
+                                	<th class="" scope="col" width="5">Star</th>
+                                   	<th class="" scope="col" width="20%" class="sender">Sent To</th>
+                                	<th class="" scope="col"  width="70%">Subject</th>
+                               		<th class="" scope="col" width="10%">Date</th>
+                            	</tr>
+                            </thead>
+
+                                <tbody>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1"/></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>aldoshik</td>
+                                    <td><a href="" class="title">sankar</a></td>
+
+                                    <td class="date">May 1</td>
+                                </tr>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Facebook</td>
+                                    <td><a href="" class="title">Facebook Wall Script 3.0</a></td>
+
+                                    <td class="date">Apr 30</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Twitter</td>
+                                    <td><a href="" class="title">Animated Login Form with jQuery & CSS3</a></td>
+
+                                    <td class="date">Apr 28</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>PHP</td>
+                                    <td><a href="" class="title">Validate IPv4 Address in PHP</a></td>
+                                    <td class="date">Apr 20</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar starred"></a></td>
+                                    <td>aldoshik</td>
+                                    <td><a href="" class="title">Identifying Browser Window Screen Size & Name with JQuery</a></td>
+                                    <td class="date">June 19</td>
+                                </tr>
+                                      <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Aldoshik</td>
+                                    <td><a href="" class="title">Facebook Style YouTube Video Expanding with jQuery</a></td>
+                                   	<td class="date">May 1</td>
+                                </tr>
+                                <tr class="unread">
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Facebook</td>
+                                    <td><a href="" class="title">Facebook Wall Script 3.0</a></td>
+                                    <td class="date">Apr 30</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>Twitter</td>
+                                    <td><a href="" class="title">Animated Login Form with jQuery & CSS3</a></td>
+                                  	<td class="date">Apr 28</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar"></a></td>
+                                    <td>PHP</td>
+                                    <td><a href="" class="title">Validate IPv4 Address in PHP</a></td>
+                                    <td class="date">Apr 20</td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter"><input type="checkbox" class="checkbox1" name="" /></td>
+                                    <td class="star"><a class="msgstar starred"></a></td>
+                                    <td>aldoshik</td>
+                                    <td><a href="" class="title">Identifying Browser Window Screen Size & Name with JQuery</a></td>
+                                    <td class="date">June 19</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                                <!--Compose Windows-->
+
+
+
+
+
+
+
+
+
+
+                     </div><!--Mail header-->
+            	</div><!--mail Content-->
+
+
+            <div><!--Column-->
+
+        </div><!--Row-->
+        <div class="container1">
+	<div id="content">
+
+
+
+        <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="{% static "images/close_pop.png" %}" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>To</span>
+                <input id="user" name="user" value="" type="text" autocomplete="on" placeholder="">
+                </label>
+
+                <label class="password">
+                <span>Subject</span>
+                <input id="subject" name="subject" value="" type="text" placeholder="">
+                </label>
+                <p  id="ex3">
+				<label for="description" style="vertical-align: top;">Body</label>
+				<textarea name="description" id="description" cols="45" rows="10" id="ex3"></textarea>
+			</p>
+                <div class="pull-right">
+                <button class="btn btn-primary" type="button">Sent</button>
+                <button class="btn btn-primary" type="button" >Cancel</button>
+                </div>
+
+
+                </fieldset>
+          </form>
+		</div>
+         <div class="container1">
+	<div id="content">
+
+
+
+        <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="{% static "images/close_pop.png" %}" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>To</span>
+                <input id="user" name="user" value="" type="text" autocomplete="on" placeholder="">
+                </label>
+
+                <label class="password">
+                <span>Subject</span>
+                <input id="subject" name="subject" value="" type="text" placeholder="">
+                </label>
+                <p  id="ex3">
+				<label for="description" style="vertical-align: top;">Body</label>
+				<textarea name="description" id="description" cols="45" rows="10" id="ex3"></textarea>
+			</p>
+                <div class="pull-right">
+                <button class="btn btn-primary" type="button">Sent</button>
+                <button class="btn btn-primary" type="button" >Cancel</button>
+                </div>
+
+
+                </fieldset>
+          </form>
+		</div>
+
+        <!--Inbox /Outbox Displays-->
+
+    </div>
+</div>
+</div>
+</div>
+
+    <!--Mail Script Ends-->
+
+<footer>
+	<div class="row">
+    	<div class="col-lg">
+
+        asdfasdf
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="{% static "js/jquery-1.8.3.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui-1.10.3.custom.min.js" %}"></script>
+    <script src="{% static "js/jquery.ui.touch-punch.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap-select.js" %}"></script>
+    <script src="{% static "js/bootstrap-switch.js" %}"></script>
+    <script src="{% static "js/flatui-checkbox.js" %}"></script>
+    <script src="{% static "js/flatui-radio.js" %}"></script>
+    <script src="{% static "js/jquery.tagsinput.js" %}"></script>
+    <script src="{% static "js/jquery.placeholder.js" %}"></script>
+
+<!--Mail script-->
+<script>
+	$(document).ready(function(){
+		$('.out').hide();
+	});
+	</script>
+    <script>
+   $(document).ready(function() {
+            $('#outbox_id').click(function() {
+                $('.in').hide();
+				$('.out').show();
+
+            });
+			 $('#inbox_id').click(function() {
+                $('.out').hide();
+				$('.in').show();
+
+            });
+        });
+		</script>
+
+
+        <script>
+	$(document).ready(function() {
+			$('.checkboxval').click(function(event){
+				if(this.checked){
+					$('.checkbox1').each(function(){
+						this.checked=true;
+					});
+
+				}else{
+					$('.checkbox1').each(function(){
+						this.checked=false;
+					});
+
+                    }
+			});
+	});
+
+  </script>
+<!---Compose Box javascript-->
+ <script type="text/javascript">
+$(document).ready(function() {
+	$('a.login-window').click(function() {
+
+
+		var loginBox = $(this).attr('href');
+
+
+		$(loginBox).fadeIn(300);
+
+
+		var popMargTop = ($(loginBox).height() + 24) / 2;
+		var popMargLeft = ($(loginBox).width() + 24) / 2;
+
+		$(loginBox).css({
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+
+
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+
+		return false;
+	});
+
+
+	$('a.close, #mask').live('click', function() {
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		$('#mask').remove();
+	});
+	return false;
+	});
+});
+</script>
+<!--Deleting the mail-->
+<script>
+$(document).ready(function() {
+
+$(".delete_mail").on('click', function() {
+  var checked = $('tbody input:checkbox:checked').map(function () {
+    return this.value;
+}).get();
+$('tbody input:checkbox:checked').parents("tr").remove();
+
+});
+
+});
+</script>
+<!--Marking as read/unread-->
+<script>
+$(document).ready(function(){
+	$(".read_mail").on('click',function () {
+		var checked= $('tbody input:checkbox:checked').map(function() {
+			return this.value;
+		}).get();
+		$('#background-image tbody input:checkbox:checked').parents("tr").css(
+															{'background':'red'});
+	});
+
+});
+
+</script>
+
+<!-- Mail Script Ends-->
+
+
+<!--Menu-->
+<script>
+$(document).ready(function(){
+	$("#news_icon").mouseover(function(){
+		$("#news_icon").attr('src',{% static 'images/newsfed1.png' %});
+	});
+	$("#news_icon").mouseout(function(){
+		$("#news_icon").attr('src',{% static 'images/newsfed.png' %});
+	});
+
+	$("#msg_icon").mouseover(function(){
+		$("#msg_icon").attr('src',{% static 'images/msg1111.png' %});
+	});
+	$("#msg_icon").mouseout(function(){
+		$("#msg_icon").attr('src',{% static 'images/msg111.png'%});
+	});
+
+	$("#pro_icon").mouseover(function(){
+		$("#pro_icon").attr('src',{% static 'images/pro_icon1.png' %});
+	});
+	$("#pro_icon").mouseout(function(){
+		$("#pro_icon").attr('src',{% static 'images/pro_icon.png' %});
+	});
+
+});
+
+
+</script>
+
+<!--Menu ends-->
+<!--Like button in timeline-->
+<script>
+var count=0;
+
+	$(document).ready(function(){
+
+		$('.like').click(function(event){
+			event.stopImmediatePropagation()
+			++count;
+
+			$('.count').text(count);
+		});
+
+	});
+
+
+</script>
+
+  </body>
+</html>

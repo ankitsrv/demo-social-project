@@ -1,0 +1,395 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('../fonts/droidsans-webfont.eot');
+    src: url('../fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-webfont.woff') format('woff'),
+         url('../fonts/droidsans-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifregular';
+    src: url('../fonts/droidserif-webfont.eot');
+    src: url('../fonts/droidserif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidserif-webfont.woff') format('woff'),
+         url('../fonts/droidserif-webfont.ttf') format('truetype'),
+         url('../fonts/droidserif-webfont.svg#droid_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,.ns_nerveSlider .ns_slideContent div span,#mainmenu,.button, .filters,.icon,.owl-theme .owl-controls .owl-nav,.faq dt,.skillbar-title span,.skill-bar-percent,blockquote.portfolio-blockquote p,.menu-icons > .menu-bar-icon > span, .menu-icons > .close-icon > span,.rounded-list span,.blogcontainer p.postdate,.accordion-header,.featured-image-date p, .caption-image figcaption,.comments .meta,label{
+    font-family: 'droid_sansregular';
+    line-height: 1;
+}
+body,p {
+    font-family: 'droid_serifregular';
+    font-weight: normal;
+}
+
+/* ================= GENERAL STYLES ================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+    line-height: 1.5;
+    background-image: url('../../Images/bg3.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    -webkit-overflow-scrolling: touch;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight:700;
+}
+h1 {
+    font-size: 44px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+}
+.show {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+.clear {
+    clear: both;
+}
+.container
+{
+	width:100%;
+	
+}
+
+.navbar
+{
+	border-radius:0px;
+	line-height:4.5px;
+    padding-bottom:40px;
+    margin-bottom:0px;
+    display:block;
+    padding-top:20px;
+	
+    
+	
+	
+}
+.navbar::before{
+	position:absolute;
+	width:100%;
+}
+.navbar
+{
+	width:100%;
+	position:relative;
+	//position:fixed;
+}
+.navbar
+{
+	//background-color:rgb(62,147,185);
+	//background-color:rgba(210,44,37);
+	//background:#D14D42;
+    background-color:rgba(0,0,0,.3);
+   // background:#313131;
+    
+   z-index:100;
+   width:100%;
+   
+    
+	
+}
+
+#menu2 nav 
+{
+
+    background-color:rgb(52,74,93);
+	//background-color:rgba(250,250,250,.7);
+    
+	
+}
+.navbar li
+{
+    letter-spacing:.1em;
+    font-family: lato;
+    
+}
+.navbar li a
+{
+  
+    font-family: lato;
+    font-size:16px;
+    //color:#eb5656;
+   color:white;
+	
+}
+
+.navbar li dropdown-menu a
+{
+    font-size:12px;
+    
+}
+.dropdown-menu
+{
+    font-size:14px;
+}
+#user a{
+    color:white;
+    font-family: "ubuntu-mono";
+    font-size:30px;
+    background:(0,0,0,1);
+}
+#user a:hover{
+    background:#eb5656;
+    padding:20px;
+    border-radius:0px;
+}
+
+#user a{
+     color:white;
+    font-family: "ubuntu-mono";
+    font-size:30px;
+    background:(0,0,0,1);
+}
+
+    
+
+
+
+.icon-container-bg {
+    position:relative;
+background-color: #eb5656;
+    background-color: #F98262;
+    
+}
+.icon-container-bg {
+position: relative;
+padding: 60px 30px;
+}
+* {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+user agent stylesheetdiv {
+display: block;
+}
+Pseudo ::after element
+.icon-container-bg:after {
+border-bottom-color: #eb5656;
+}
+.icon-container-bg:after {
+bottom: 0px;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: transparent;
+border-width: 20px;
+left: 50%;
+margin-left: -20px;
+}
+
+body {
+color: #fff;
+background-color: #414141;
+background-color: #684e91;
+background-color:rgba(49,49,49,.2);
+
+
+}
+body {
+font-size: 15px;
+line-height: 1.5;
+background-image: url('../images/bg.png');
+background-repeat: repeat;
+background-attachment: fixed;
+-webkit-overflow-scrolling: touch;
+}
+body, p {
+font-family: 'droid_serifregular';
+font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+/* ================= ICONS  ================== */
+.icon-container-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -60px;
+    margin-left: -30px;
+}
+.icon-container-bg {
+    position: relative;
+    padding: 70px 30px;
+    padding-bottom:10px;
+	background-color:#684e91;
+}
+.icon-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.icon-container-bg:after {
+	bottom:0px;
+	border:solid transparent;
+	content:" ";
+	height:0;
+	width:0;
+	position:absolute;
+	pointer-events:none;
+	border-color:transparent;
+	border-width:20px;
+	left:50%;
+    margin-left: -20px;
+}
+.bottom-slider {
+    margin-top: -145px;
+}
+.icon {
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    display: inline-block;
+    position:relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    vertical-align: bottom;
+    margin: 25px 0px 0px 0px;
+}
+.icon img {
+    width:48px;
+    height:48px;
+    -webkit-transform: rotate(45deg);
+    
+    transform: rotate(45deg);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition:all 0.2s linear;
+   
+}
+.icon .diamond {
+    padding: 26px;
+    width: 120px;
+    height: 120px;
+    z-index: 9;
+    display: inline-block;
+    margin-bottom:0px;
+    -webkit-transition:all 0.2s linear;
+    font-size:70px;
+    line-height:1;
+    text-align:center;
+    position:relative;
+    cursor:pointer;
+    -webkit-transform: rotate(-45deg);
+    margin-top:70px;
+    
+    transform: rotate(-45deg);
+    -webkit-backface-visibility: hidden;
+    background-color: #313131;
+    background:#3b5998;
+}
+.icon .diamond:hover {
+    -webkit-transform: rotate(-225deg);
+   -moz-transform: rotate(-225deg);
+   -ms-transform: rotate(-225deg);
+   -o-transform: rotate(-225deg);
+   transform: rotate(-225deg);
+}
+.icon .diamond:hover img {
+    -webkit-transform: rotate(585deg);
+   -moz-transform: rotate(585deg);
+   -ms-transform: rotate(585deg);
+   -o-transform: rotate(585deg);
+   transform: rotate(585deg);
+}
+
+
+.h31{
+    color:white;
+    font-family: "lato";
+    letter-spacing: .07em;
+    font-size:18px;
+}
+
+<!--======================icon Ends=====================-->
+
+
+
+<!--======================Button=======================-->
+
+.btn-primary
+{
+    background:#313131;
+}
+
+
+<!--Footer-------------------------------->
+.footer1::before{
+	height:100px;
+	background:rgba(0,0,0,.2);
+}
+.footer1{
+	height:100px;
+	background:rgba(0,0,0,.2);
+	background:#313131;
+}
+body::before
+{
+	background:url(../images/renzler.gif);
+	background-repeat:repeat;
+}
+<!--Container design-->
+.container::before
+{
+    background:url(../images/renzler.gif);
+	background-repeat:repeat;
+}
+.container
+{
+	background:url(../images/renzler.gif);
+	//background-image:url(../images/indeximage.jpg);
+	//background:url(../images/bo_play_pattern.png);
+	background:url(../images/picture-background-changer-5.jpg);
+	//background:url(../images/website-background-2.jpg);
+	background:url(../images/Black%20Background%20Wood%20-%202560x1600%20by%20Freeman.jpg);
+	//background:url(../images/black-background-wallpaper-hd-4.jpg);
+	background-repeat:repeat;
+	z-index:1001;
+}
+
+
+
+

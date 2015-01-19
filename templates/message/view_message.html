@@ -1,0 +1,49 @@
+{#{% extends "base.html" %} #}
+
+
+
+{% block content %}
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Message</title>
+</head>
+<body>
+<h1>View Message</h1>
+<dl class="message-headers">
+    <dt>Subject :  <strong>{{ subject }}</strong>
+    <dd></dd>
+    <dt>Sender  :  {{ sender }}</dt>
+
+    <dt>Date   :  {{ sent_at|date:_("DATETIME_FORMAT")}}</dt>
+
+    <dt><strong>Recipient   : </strong>  {{ recipient }} </dt>
+
+    <dt><strong>Body</strong>  : &nbsp; {{ body|linebreaksbr }} </dt>
+</dl>
+Back to
+<a href="{% url 'message' username %}">Message</a>
+</body>
+</html>
+    {% comment %}
+{% ifequal message.recipient.pk user.pk %}
+<a href="{% url 'messages_reply' message.id %}">Reply</a>
+{% endifequal %}
+<a href="{% url 'messages_delete' message.id %}">Delete</a>
+{% endcomment %}
+
+{% comment %}Example reply_form integration
+{% if reply_form %}
+<h1>{% trans "Compose reply"%}</h1>
+<form action="{% url 'messages_reply' message.id %}" method="post">
+{% csrf_token %}
+<table>
+{{ reply_form.as_table }}
+</table>
+<input type="submit" value="{% trans "Send" %} &raquo;"/>
+</form>
+{% endif %}
+{% endcomment %}
+{% endblock %}

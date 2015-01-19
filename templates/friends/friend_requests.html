@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friend Requests</title>
+    <h1> Friend Requests </h1>
+</head>
+<body>
+    {% for friend_request in friend_requests %}
+        <li>Sender : {{ friend_request.from_user }}</li>
+        <li>Sent at : {{ friend_request.sent_at }}</li>
+        <li>Status : {{ friend_request.status }}</li>
+
+        <input type="submit" value="Accept" /> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Decline"/>
+        <p></p>
+        {% endfor %}
+
+    <input type="submit" value="Accept" /> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Decline"/>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+ @charset "utf-8";
+/* CSS Document */
+!--Mail-->
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-black.eot');
+  src: url('../fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-black.woff') format('woff'), url('../fonts/lato/lato-black.ttf') format('truetype'), url('../fonts/lato/lato-black.svg#latoblack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-bold.eot');
+  src: url('../fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bold.woff') format('woff'), url('../fonts/lato/lato-bold.ttf') format('truetype'), url('../fonts/lato/lato-bold.svg#latobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-bolditalic.eot');
+  src: url('../fonts/lato/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bolditalic.woff') format('woff'), url('../fonts/lato/lato-bolditalic.ttf') format('truetype'), url('../fonts/lato/lato-bolditalic.svg#latobold-italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-italic.eot');
+  src: url('../fonts/lato/lato-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-italic.woff') format('woff'), url('../fonts/lato/lato-italic.ttf') format('truetype'), url('../fonts/lato/lato-italic.svg#latoitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-light.eot');
+  src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype'), url('../fonts/lato/lato-light.svg#latolight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-regular.eot');
+  src: url('../fonts/lato/lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-regular.woff') format('woff'), url('../fonts/lato/lato-regular.ttf') format('truetype'), url('../fonts/lato/lato-regular.svg#latoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src:url(../fonts/roboto/Roboto-Light.ttf);
+}
+@font-face {
+	font-family: 'Roboto1';
+	src:url(../fonts/roboto/Roboto-Regular.ttf));
+}
+body
+{
+	width:100%;
+	
+	//background:rgba(108, 122, 137,1);
+	//background:rgba(0,0,0,.6);
+	background::rgba(191,191,191,1);
+	
+}
+.bg-container::before{
+background:url(../images/tool-bg.png);
+background-size:contain;
+width:100%;
+
+}
+
+.bg-container {
+	//background:rgba(108, 122, 137,1);
+	//background:rgba(236,240,241,.6);
+	background:#909090;
+	background:rgba(60,60,60,1);
+background-size:contain;
+position: relative;
+height: 100%;
+display: block;
+width: 100%;
+z-index: -1;
+}
+.mail_content::before{
+	background:#fff;
+	align:center;
+	width:100%;
+	height:auto;
+	width:100%;
+}
+.mail_content{
+	//background: url(../images/back.png);
+	//background:white;
+	align:center;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	height:auto;
+	padding:10px;
+	//background:rgba(108, 122, 137,1);
+	//background:rgba(41, 128, 185, 1);
+	//background:rgba(189, 195, 199, 1);
+	//background:rgba(44, 62, 80, 1);
+	//background-color:rgba(241,196,15,.3);
+	//background-color:rgba(255,255,255,.1);
+	//background:#909090;
+	//background:rgba(189, 195, 199,1.0);
+	background:white;
+		
+
+	
+}
+
+.mail_list_header
+{
+margin-left:auto;
+	margin-right:auto;
+}
+
+.mail_list_header li
+{
+	list-style:none;
+	display:inline-block;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:lighter;
+	
+	
+	
+}
+
+.mail_list_header li a
+{
+	margin:0px;
+	padding:1em;
+	
+	margin-bottom:10px;
+	//font-family:"lato";
+	font-weight:lighter;
+}
+
+.mail_content .btn-primary{
+	//background:rgba(235, 86, 86,.7);
+	//background:rgb(235, 86, 86,)
+	border-radius:0px;
+	//border:2px solid rgba(255,255,255,1);
+	font-size:21px;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:lighter;
+	
+	//background:rgba(149,149,149,1);
+	background:#DB6B71;
+	
+	
+	
+}
+.mail_content .btn-primary:hover
+{
+	//background:rgba(270,75,57,.9);
+	background:rgba(255,255,255,1	);
+	border:2px solid rgba(235, 86, 86,.7);
+	//color:#eb5656;
+	
+	color:#15710E;
+	
+	
+	
+	
+}
+
+.mail_table{
+	border-collapse:collapse;
+	display:inline-table;
+	overflow:hidden;
+	
+}
+.table_row{
+	//display: block;
+}
+.table_row_item::before{
+	display:block;
+	bakcground:#eb5656;
+}
+.table_row_item{
+	display:block;
+	//bakcground:#eb5656;
+}
+#background-image
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width:95%;
+	text-align: left;
+	border-collapse: collapse;
+	
+}
+
+#background-image table
+{
+
+	height:auto;
+	overflow:hidden;
+	padding:10px;
+}
+#background-image tr{
+	width:100%;
+	//background:rgba(39,39,39,1);
+	//background:rgba(0,0,0,.5);
+		
+}
+#background-image th
+{
+	padding: 30px;
+	font-weight: normal;
+	font-size: 14px;
+	color: white;
+	//background:rgba(29,29,29,1);
+	text-align:left;
+	padding:15px;
+	font-family:"Lato";
+	font-size:18px;
+	//color:rgba(192, 57, 43, 1.0);
+	letter-spacing:.1rem;
+	background:rgba(0,0,0,.8);
+	background:black;
+	
+}
+
+#background-image td
+{
+	padding: 9px 12px;
+	color: white;
+	border-top: 1px solid #eb5656;
+	
+	//background:#bdc3c7;
+	padding:20px;
+	font-size:14px;
+	letter-spacing:.2rem;
+	line-height:1.5rem;
+	//background:rgba(0,0,0,.6);
+	//background:rgba(189,195,196,.2);
+	background:rgba(90,90,90,.81);
+	
+	
+	
+}
+
+tbody tr:hover{
+border-left: 5px solid #eb5656;
+
+}
+
+#background-image th
+{
+	
+	
+}
+
+
+
+
+
+
+#background-image a
+{
+	color:white;
+}
+#background-image a:hover{
+	
+#background-image tfoot td
+{
+	font-size: 11px;
+}
+#background-image tbody td
+{
+	
+	background:url("../images/back.png");
+	background-color:rgba(241,196,15,1);
+	
+	
+	
+}
+#background-image table
+{
+	z-index:1000;
+	overflow:hidden;
+	padding:20px;
+	
+}
+
+
+<!--========================background-image class================-->
+
+
+.out:before{
+	display:none;
+	visibilty:hidden;
+}
+.out{
+	display:none;
+	opacity:0
+	visibilty:hidden;
+}
+
+
+<!--========================Compose Message Windows-==================-->

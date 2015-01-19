@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>News-feed</title>
+</head>
+<body>
+<h1> News-Feed</h1>
+<h3><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back &nbsp;to&nbsp;&nbsp;&nbsp;
+<a href="{% url 'profile' %}">Profile</a> </strong></h3>
+
+
+                 <p></p>
+
+                {% for post in posts %}
+                    <ul>
+                    <li>User-ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ post.user }}</li>
+
+                    <strong> time:</strong>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.created }}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong>Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ post.title }}  </strong>
+                       <p></p>
+                    <strong>Post:</strong>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.body }}
+                        {% if post.picture %}
+                            <img src="{% static post.picture.path %}" alt="" width="100" height="100" />
+                        {% endif %}
+                    <p></p>
+                        {% if post.comment %}
+                                comments: {{ post.comment }}
+                                <h3>Commented by: {{ request.user }}</h3>
+                         {% endif %}
+                <form id="post_form" method="post" action="{% url 'comments' post.id %}">
+                    {% csrf_token %}
+                    <p>Add Comment :
+                <input type="text" name="comment" value="" size="50" />
+                <input type="submit" value="Add Comment" /></p>
+                </form>
+                    <p></p>
+                    <li></li>
+                    </ul>
+                {% endfor %}
+
+
+                {# {% endfor %}  #}
+        <!-- Posts  -->
+            {#  {% for posts in post %} #}
+        {% comment %}
+                <a href="{% url newsfeed.views.add_post user_name %}">{{ user_name }}</a>
+
+
+                    {# <div class="commentlink"> #}
+                 <a href="{% url newsfeed.views.post title %}"> Comments </a>
+                    {# <a href="{% url blog.views.post post.pk %}">Comments ({{ post.comment_set.count }})</a>#}
+                    {% endcomment %}
+                <p></p>
+        <a href="{% url 'add_post' %}">Add post</a>
+
+
+
+
+
+</body>
+</html>

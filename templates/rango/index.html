@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rango</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}"/>
+        <script src="{% static "js/jquery.js" %}"></script>
+    </head>
+    <body>
+        <h1> Rango says Hello ...</h1>
+
+        {% if categorys %}
+
+                {% for category in categorys %}
+                    <ol>
+                    <a href="/rango/category/{{ category.name }}/">{{ category.name }}</a>
+                    {#<li>{{ category.views }}</li>#}
+                    {#  <li>{{ category.url }}</li>#}
+                </ol>
+                {% endfor %}
+
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+
+        <h1>Including Static Media</h1>
+        <h1>Rango says ... </h1>
+        hello world ! <strong>{{ boldmessage }}</strong><br />
+        <p>{{ host }}</p>
+
+        <br><a href="/rango/add_category/">Add a New Category</a></br>
+
+        <br><a href="/rango/about/">About</a></br>
+        <p> Go to <a href="{% url 'home' %}">Home Page</a></p>
+        <img src="{% static "rango.jpg" %}" alt="Picture of rango" />
+
+    </body>
+</html>

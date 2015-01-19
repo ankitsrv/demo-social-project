@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/lato-black.eot');
+  src: url('../fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-black.woff') format('woff'), url('../fonts/lato/lato-black.ttf') format('truetype'), url('../fonts/lato/lato-black.svg#latoblack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+.container1 {
+	width: 100%;
+ margin: 0 auto; 
+ overflow: hidden;
+ }
+
+#content {	
+float: left; 
+width: 100%;
+}
+#mask {
+	display: none;
+	background: #000; 
+	position: fixed; left: 0; top: 0; 
+	z-index: 10;
+	width: 100%; height: 100%;
+	opacity: 0.8;
+	z-index: 999;
+}
+
+.login-popup{
+	display:none;
+	//background: rgba(49,49,49,.7);
+	//background:rgba(41, 128, 185, 1);
+	//background:rgba(189, 195, 199, 1);
+	background:rgba(44, 62, 80, 1);
+	//background:rgba(255,255,255,.3);
+	padding: 10px; 	
+	//border: 2px solid #ddd;
+	float: left;
+	font-size: 1.2em;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	//border-radius:3px 3px 3px 3px;
+    
+    -webkit-border-radius: 3px; 
+}
+
+img.btn_close {
+	float: right; 
+	margin-right:-10px;
+	margin-top:-10px;
+}
+
+fieldset { 
+	border:none; 
+}
+
+form.signin .textbox label { 
+	display:block; 
+	padding-bottom:7px; 
+}
+
+form.signin .textbox span { 
+	display:block;
+}
+
+form.signin p, form.signin span { 
+	color:#ddd; 
+	font-size:14px; 
+	line-height:18px;
+	line-height:2em;
+} 
+
+form.signin .textbox input { 
+	background:rgba(244,244,244,.5); 
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	color:#fff; 
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	font:13px Helvetica, sans-serif;
+	padding:6px 6px 4px;
+	width:70rem;
+	background:white;
+	color:black;
+}
+placeholder
+{
+	color:#eb5656;
+}
+
+form.signin input:-moz-placeholder { 
+color:#bbb; 
+text-shadow:0 0 2px #000; 
+}
+form.signin input::-webkit-input-placeholder { 
+color:#bbb; 
+text-shadow:0 0 2px #000; 
+}
+form.signin #description{
+	background:#666666; 
+	color:white;
+	border-radius:3px;
+	width:70rem;
+	background:white;
+	color:#313131;
+	font:"Comic Sans MS", cursive;
+	font:"Lato";
+	letter-spacing:1.3px;
+	word-spacing:2px;
+	font-family:.5em
+	
+}
+/* Let's get this party started */
+
+ 
+#ex3::-webkit-scrollbar{
+width:16px;
+background-color:#cccccc;
+} 
+#ex3::-webkit-scrollbar-thumb{
+background-color:#B03C3F;
+border-radius:10px;
+}
+#ex3::-webkit-scrollbar-thumb:hover{
+background-color:#BF4649;
+border:1px solid #333333;
+}
+#ex3::-webkit-scrollbar-thumb:active{
+background-color:#A6393D;
+border:1px solid #333333;
+border-radius:3px;
+} 

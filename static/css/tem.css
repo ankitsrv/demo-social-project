@@ -1,0 +1,377 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('../fonts/droidsans-webfont.eot');
+    src: url('../fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-webfont.woff') format('woff'),
+         url('../fonts/droidsans-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifregular';
+    src: url('../fonts/droidserif-webfont.eot');
+    src: url('../fonts/droidserif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidserif-webfont.woff') format('woff'),
+         url('../fonts/droidserif-webfont.ttf') format('truetype'),
+         url('../fonts/droidserif-webfont.svg#droid_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,.ns_nerveSlider .ns_slideContent div span,#mainmenu,.button, .filters,.icon,.owl-theme .owl-controls .owl-nav,.faq dt,.skillbar-title span,.skill-bar-percent,blockquote.portfolio-blockquote p,.menu-icons > .menu-bar-icon > span, .menu-icons > .close-icon > span,.rounded-list span,.blogcontainer p.postdate,.accordion-header,.featured-image-date p, .caption-image figcaption,.comments .meta,label{
+    font-family: 'droid_sansregular';
+    line-height: 1;
+}
+body,p {
+    font-family: 'droid_serifregular';
+    font-weight: normal;
+}
+
+/* ================= GENERAL STYLES ================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+    line-height: 1.5;
+    //background-image: url('../../Images/bg3.jpg');
+   // background:url(../images/bgr-clouds.png);
+	//background-size:cover;
+	background-repeat: repeat;
+    background-attachment: fixed;
+    -webkit-overflow-scrolling: touch;
+	
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight:700;
+}
+h1 {
+    font-size: 44px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+}
+.show {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+.clear {
+    clear: both;
+}
+.container
+{
+	width:100%;
+	
+}
+
+.navbar
+{
+	border-radius:0px;
+	line-height:4.5px;
+    padding-bottom:40px;
+    margin-bottom:0px;
+    display:block;
+    padding-top:20px;
+	width:100%;
+	 background:rgba(90, 65, 129, 1);
+   z-index:100;
+   width:100%;
+ 
+   
+	
+	
+}
+.navbar::before{
+	
+	width:100%;
+}
+#menu2 nav 
+{
+
+  //  background-color:rgb(52,74,93);
+	//background-color:rgba(250,250,250,.7);
+	
+    
+	
+}
+.navbar li
+{
+    letter-spacing:.1em;
+    font-family: lato;
+	size:
+    
+}
+.navbar li a
+{
+  
+    font-family: lato;
+    font-size:16px;
+    //color:#eb5656;
+   color:white;
+//	 -webkit-perspective:90px;
+//   perspective:90px;
+}
+
+.navbar li dropdown-menu a
+{
+    font-size:12px;
+	font-size:6px;
+    
+}
+.navbar-inverse .navbar-nav > li {
+
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #bbb;
+	
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: white;
+	
+}
+.dropdown-menu
+{
+    font-size:6px;
+}
+#user a{
+    color:white;
+    font-family: "ubuntu-mono";
+    font-size:90px;
+    background:(0,0,0,1);
+}
+#user a:hover{
+    background:#eb5656;
+    padding:30px;
+    border-radius:0px;
+	margin-left:20px;
+	border-radius:10px;
+}
+
+#user a{
+     color:white;
+    font-family: "ubuntu-mono";
+    font-size:60px;
+	padding:30px;
+    background:(0,0,0,1);
+	//-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
+//transform: rotateX(30deg);
+	
+	
+	
+}
+#user .fui-user{
+	margin-right:-1.5em;
+}
+ 
+
+
+
+.icon-container-bg {
+    position:relative;
+background-color: #eb5656;
+    background-color: #F98262;
+    
+}
+.icon-container-bg {
+position: relative;
+padding: 60px 30px;
+}
+* {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+user agent stylesheetdiv {
+display: block;
+}
+Pseudo ::after element
+.icon-container-bg:after {
+border-bottom-color: #eb5656;
+}
+.icon-container-bg:after {
+bottom: 0px;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: transparent;
+border-width: 20px;
+left: 50%;
+margin-left: -20px;
+}
+
+body {
+color: #fff;
+background-color: #414141;
+background-color: #684e91;
+background-color:rgba(49,49,49,.2);
+
+
+}
+body {
+font-size: 15px;
+line-height: 1.5;
+background-image: url('../images/bg.png');
+background-repeat: repeat;
+background-attachment: fixed;
+-webkit-overflow-scrolling: touch;
+}
+body, p {
+font-family: 'droid_serifregular';
+font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<!---===========New Icons bar===-->
+.menu_icon_bar::before{
+	width:100%;
+	background:rgba(0,0,0,.6);
+	padding:10px;
+	margin:20px;
+	position:relative;
+}
+.menu_icon_bar{
+	float:left;
+	display:inline-block;
+	background:rgba(0,0,0,.8);
+	padding:3em;
+	position:relative;
+	
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	align:center;
+	
+}
+.menu_icon_bar_wrap::before
+{
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	align:center;
+	
+}
+.menu_icon_bar_wrap
+{
+	horizontal-align:middle;
+	margin-left:35rem;
+	margin-top:0px;
+	
+	
+}
+.menu_icon_bar_item{
+	float:left;
+	display:inline-block;
+	margin-right:15rem;
+	margin-bottom:1px;
+	display:inline-block;
+	align:center;
+	
+	
+}
+
+
+	
+
+
+
+
+<!--======================icon Ends=====================-->
+
+
+
+<!--======================Button=======================-->
+
+.btn-primary
+{
+    background:#313131;
+}
+
+
+<!--Footer-------------------------------->
+.footer1::before{
+	height:100px;
+	background:rgba(0,0,0,.2);
+}
+.footer1{
+	height:100px;
+	background:rgba(0,0,0,.2);
+	background:#313131;
+}
+body::before
+{
+	background:url(../images/renzler.gif);
+	background-repeat:repeat;
+}
+<!--Container design-->
+.container::before
+{
+    background:url(../images/renzler.gif);
+	background-repeat:repeat;
+	width:100%;
+}
+.container
+{
+	background:url(../images/bg-bootstrap.png),rgba(0,0,0,.1);
+	//background:url(../images/bgr-clouds.png);
+	background-size:cover;
+	background:rgba(108, 122, 137,1);
+	//background-repeat:repeat;
+	z-index:1001;
+	background:#909090;
+	background: url(../images/bg-bootstrap.png),rgba(189, 195, 199,1.0);
+	position:relative;
+	margin:0 auto;
+	width:80%;
+	
+	
+}
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+border-top-color: #bbb;
+border-bottom-color: #bbb;
+}
+.navbar-unread, .navbar-new {
+
+background-color: #bbb;
+}
+.dropdown-menu > li > a:hover
+{
+	background:#313131;
+}
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post</title>
+    <h1> Add friend</h1>
+    <p>{{ user }}</p>
+</head>
+<body>
+
+
+
+<form action="" method="post">
+        {% csrf_token %}
+        <h4> User : {{ user }}</h4>
+        <table>
+        <td><h4> Friend name </h4>{{ form.friends }}</td>
+
+            <td><h4> Friend list </h4>{{ form.friend }}</td>
+
+            {#<td><h4> User </h4>{{ form.from_user }}</td> #}
+
+        </table>
+    <p></p>
+        <input type="submit" value="Send Friend Request"/>
+    </form>
+
+            {% comment %}
+        <strong>Friend name:</strong>
+            <input type="text" name="friend_name" value="" size="20" />
+            <p></p>
+            <strong>ADD:</strong>
+            {% endcomment %}
+
+        <p></p>
+        To go back to <strong>Friend-list</strong> click:
+        <a href="/home/friends/my_friends/">here</a>
+        <p>To go back to profile page click
+        <a href="{% url 'profile' %}">Here</a> </p>
+
+        </body>
+</html>

@@ -1,0 +1,14 @@
+/* line 2, ../../scss/Home_Page/Home_Page.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 7, ../../scss/Home_Page/Home_Page.scss */
+li {
+  display: inline;
+}
+
+/* line 12, ../../scss/Home_Page/Home_Page.scss */
+h1 {
+  color: blue;
+}
