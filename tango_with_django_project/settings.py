@@ -31,11 +31,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     )
 
-"""
-TEMPLATE_DIRS = (
-    '/home/nirmal/Documents/ANKIT/tango_with_django_project/templates/',
-)
-"""
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
